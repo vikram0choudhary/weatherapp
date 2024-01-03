@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☁️SKYSCOPE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <nav>
+        
+        <ul>
+            <li><a href="index.html" onclick="showWeather('mumbai')">Home</a></li>
+            <li><a href="current_weather.html">Current Weather</a></li>
+            <li><a href="forecast.html">Forecast</a></li>
+            <li><a href="cities.html">Cities</a></li>
+            <li><a href="maps.html">Maps</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+   
+    </nav>
+
+
+    <div class="card">
+        <div>
+            <h1 class="weather1">☁️SKYSCOPE</h1>
+            <video src="./video/video.mp4" autoplay loop muted ></video>
+        </div>
+        <div class="search">
+            <input type="text" class="search-bar" placeholder="Search">
+            <button><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list-search" width="1.5em" height="1.5em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <circle cx="15" cy="15" r="4" /> <path d="M18.5 18.5l2.5 2.5" /> <path d="M4 6h16" /> <path d="M4 12h4" /> <path d="M4 18h4" /> </svg></button>
+        </div>
+        <div class="weather loading">
+            <h2 class="city">Weather in Mumbai</h2>
+            <h1 class="temp">32°C</h1>
+            <div class="flex">
+                <img src="http://openweathermap.org/img/wn/04n.png" alt="" class="icon"/>
+                <div class="description">Cloudy</div>
+            </div>
+            <div class="humidity">Humidity: 60%</div>
+            <div class="wind">Wind Speed: 3.2 km/h</div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 SKYSCOPE. All rights reserved.</p>
+    </footer>
+</body>
+</html>
