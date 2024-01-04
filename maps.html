@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☁️SKYSCOPE</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Add your custom styles if needed -->
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            padding-top: 50px; /* Adjust padding to match navbar height */
+        }
+
+        #map-container {
+            height: calc(100vh - 50px); /* Set height to full viewport height minus navbar height */
+            margin-top: 0px; /* Adjust margin to match navbar height */
+        }
+
+        nav {
+            background: #202124;
+            padding: 13px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 120%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="index.html" onclick="showWeather('mumbai')">Home</a></li>
+                <li><a href="current_weather.html">Current Weather</a></li>
+                <li><a href="forecast.html">Forecast</a></li>
+                <li><a href="cities.html">Cities</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="map-container"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var map = L.map('map-container').setView([40.7128, -74.0060], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+        });
+    </script>
+</body>
+</html>
